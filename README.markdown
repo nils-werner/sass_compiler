@@ -4,7 +4,7 @@
 
 - Version: 1.0
 - Date: 2nd February 2012
-- Requirements: Symphony 2.2 or later, maybe earlier
+- Requirements: Symphony 2.3 or later
 - Author: Nils Werner, nils.werner@gmail.com
 - GitHub Repository: <http://github.com/nils-werner/sass_compiler>
 
