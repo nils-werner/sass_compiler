@@ -3,7 +3,7 @@
 "Just in time" SASS compiler for Symphony CMS.
 
 - Version: 1.0
-- Date: 2nd February 2012
+- Date: 2nd February 2013
 - Requirements: Symphony 2.3 or later
 - Author: Nils Werner, nils.werner@gmail.com
 - GitHub Repository: <http://github.com/nils-werner/sass_compiler>

@@ -6,7 +6,7 @@
 			return array(
 				'name' => 'SASS Compiler',
 				'version' => '1.0',
-				'release-date' => '2012-02-02',
+				'release-date' => '2013-02-02',
 				'author' => array(
 					array(
 						'name' => 'Nils Werner',
