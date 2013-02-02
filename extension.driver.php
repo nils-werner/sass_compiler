@@ -1,12 +1,12 @@
 <?php
 
-	Class extension_LESS_Compiler extends Extension{
+	Class extension_SASS_Compiler extends Extension{
 
 		public function about(){
 			return array(
-				'name' => 'LESS Compiler',
+				'name' => 'SASS Compiler',
 				'version' => '1.0',
-				'release-date' => '2011-09-04',
+				'release-date' => '2012-02-02',
 				'author' => array(
 					array(
 						'name' => 'Nils Werner',
@@ -22,7 +22,7 @@
 		}
 
 		public function install(){
-			General::realiseDirectory(CACHE . '/less_compiler/', Symphony::Configuration()->get('write_mode', 'directory'));
+			General::realiseDirectory(CACHE . '/sass_compiler/', Symphony::Configuration()->get('write_mode', 'directory'));
 			
 			$htaccess = @file_get_contents(DOCROOT . '/.htaccess');
 
@@ -32,14 +32,15 @@
 			$token = md5(time());
 
 			$rule = "
-	### LESS RULES
-	RewriteRule ^less\/(.+\.less)\$ extensions/less_compiler/lib/less.php?param={$token} [L,NC]\n\n";
+	### SASS RULES
+	RewriteRule ^sass\/(.+\.sass)\$ extensions/sass_compiler/lib/sass.php?mode=sass&param={$token} [L,NC]
+	RewriteRule ^scss\/(.+\.scss)\$ extensions/sass_compiler/lib/sass.php?mode=scss&param={$token} [L,NC]\n\n";
 
 			## Remove existing the rules
-			$htaccess = self::__removeLessRules($htaccess);
+			$htaccess = self::__removeSassRules($htaccess);
 
-			if(preg_match('/### LESS RULES/', $htaccess)){
-				$htaccess = preg_replace('/### LESS RULES/', $rule, $htaccess);
+			if(preg_match('/### SASS RULES/', $htaccess)){
+				$htaccess = preg_replace('/### SASS RULES/', $rule, $htaccess);
 			}
 			else{
 				$htaccess = preg_replace('/RewriteRule .\* - \[S=14\]\s*/i', "RewriteRule .* - [S=14]\n{$rule}\t", $htaccess);
@@ -56,8 +57,8 @@
 
 			if($htaccess === false) return false;
 
-			$htaccess = self::__removeLessRules($htaccess);
-			$htaccess = preg_replace('/### LESS RULES/', NULL, $htaccess);
+			$htaccess = self::__removeSassRules($htaccess);
+			$htaccess = preg_replace('/### SASS RULES/', NULL, $htaccess);
 
 			return @file_put_contents(DOCROOT . '/.htaccess', $htaccess);
 		}
@@ -71,8 +72,8 @@
 
 			if($htaccess === false) return false;
 
-			$htaccess = self::__removeLessRules($htaccess);
-			$htaccess = preg_replace('/### LESS RULES/', NULL, $htaccess);
+			$htaccess = self::__removeSassRules($htaccess);
+			$htaccess = preg_replace('/### SASS RULES/', NULL, $htaccess);
 
 			return @file_put_contents(DOCROOT . '/.htaccess', $htaccess);
 		}
@@ -81,8 +82,8 @@
 		Utilities:
 	-------------------------------------------------------------------------*/
 
-		private static function __removeLessRules($string){
-			return preg_replace('/RewriteRule \^less[^\r\n]+[\r\n]?/i', NULL, $string);
+		private static function __removeSassRules($string){
+			return preg_replace('/RewriteRule \^sass[^\r\n]+[\r\n]?/i', NULL, $string);
 		}
 
 	}
