@@ -10,7 +10,7 @@
 
 ## Synopsis
 
-A simple way to compile SASS files on the fly via the URL.
+A simple way to compile SASS and SCSS files on the fly via the URL.
 
 ## Installation
 
@@ -20,6 +20,10 @@ Information about [installing and updating extensions](http://symphony-cms.com/l
 
 ### Basics
 
-Similar to JIT Image Manipulation: Just include your SASS stylesheet, say `workspace/assets/style.sass` using
+Similar to JIT Image Manipulation: Just include your SCSS stylesheet, say `workspace/assets/style.scss` using
+
+	<link rel="stylesheet" href="/scss/assets/style.scss" />
+
+Alternatively, you can use the older, less CSS-like dialect of SASS:
 
 	<link rel="stylesheet" href="/sass/assets/style.sass" />

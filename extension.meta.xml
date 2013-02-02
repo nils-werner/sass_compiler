@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension id="sass_compiler" status="experimental" xmlns="http://symphony-cms.com/schemas/extension/1.0">
 	<name>SASS Compiler</name>
-	<description>Compile SASS-files to proper CSS</description>
+	<description>Compile SASS- and SCSS-files to proper CSS</description>
 	<repo type="github">https://github.com/nils-werner/sass_compiler</repo>
 	<types>
 		<type>Workflow</type>
