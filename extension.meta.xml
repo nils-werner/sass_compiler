@@ -15,7 +15,7 @@
 	<media>
 	</media>
 	<releases>
-		<release version="1.1" date="2015-07-05" min="2.6.0">
+		<release version="1.1" date="2015-07-05" min="2.6">
 			Initial Release
 		</release>
 	</releases>
