@@ -6,7 +6,7 @@
 	define('DOMAIN', rtrim(rtrim($_SERVER['HTTP_HOST'], '/') . str_replace('/extensions/sass_compiler/lib', NULL, dirname($_SERVER['PHP_SELF'])), '/'));
 
 	// Include some parts of the engine
-	require_once(DOCROOT . '/symphony/lib/boot/bundle.php');
+	require_once(DOCROOT . '/vendor/autoload.php');
 	require_once(CONFIG);
 	
 	require_once('dist/SassParser.php');
