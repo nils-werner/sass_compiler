@@ -5,8 +5,8 @@
 		public function about(){
 			return array(
 				'name' => 'SASS Compiler',
-				'version' => '1.0',
-				'release-date' => '2013-02-02',
+				'version' => '1.1',
+				'release-date' => '2015-07-05',
 				'author' => array(
 					array(
 						'name' => 'Nils Werner',
@@ -36,7 +36,7 @@
 	RewriteRule ^sass\/(.+\.sass)\$ extensions/sass_compiler/lib/sass.php?mode=sass&param={$token} [L,NC]
 	RewriteRule ^scss\/(.+\.scss)\$ extensions/sass_compiler/lib/sass.php?mode=scss&param={$token} [L,NC]\n\n";
 
-			## Remove existing the rules
+			## Remove existing rules
 			$htaccess = self::__removeSassRules($htaccess);
 
 			if(preg_match('/### SASS RULES/', $htaccess)){
