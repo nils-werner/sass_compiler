@@ -2,8 +2,8 @@
 
 "Just in time" SASS compiler for Symphony CMS.
 
-- Version: 1.1
-- Date: 5th July 2015
+- Version: 1.1.1
+- Date: 27th February 2018
 - Requirements: Symphony 2.6 or later
 - Author: Nils Werner, nils.werner@gmail.com
 - GitHub Repository: <http://github.com/nils-werner/sass_compiler>
@@ -14,7 +14,11 @@ A simple way to compile SASS and SCSS files on the fly via the URL.
 
 ## Installation
 
-Information about [installing and updating extensions](http://symphony-cms.com/learn/tasks/view/install-an-extension/) can be found in the Symphony documentation at <http://symphony-cms.com/learn/>.
+This extension maks use of the [Sass Parser](https://github.com/richthegeek/phpsass/) as a submodule
+
+If downloading through Git use the command: git clone --recursive https://github.com/nils-werner/sass_compiler.git
+Information about Git [submodules](https://www.getsymphony.com/learn/articles/view/on-git-submodules/) can be found in the Symphony documentation at <https://www.getsymphony.com/learn>.
+
 
 ## Usage
 

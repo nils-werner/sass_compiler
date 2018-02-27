@@ -4,9 +4,9 @@
 
 		public function about(){
 			return array(
-				'name' => 'SASS Compiler',
-				'version' => '1.1',
-				'release-date' => '2015-07-05',
+					'name' => 'SASS Compiler',
+				'version' => '1.1.1',
+				'release-date' => '2018-02-27',
 				'author' => array(
 					array(
 						'name' => 'Nils Werner',

@@ -15,6 +15,9 @@
 	<media>
 	</media>
 	<releases>
+		<release version="1.1.1" date="2018-02-27" min="2.6">
+			Updated Docs with submodule information
+		</release>
 		<release version="1.1" date="2015-07-05" min="2.6">
 			Symphony 2.6 compatibility
 		</release>
